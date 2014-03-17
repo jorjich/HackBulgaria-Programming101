@@ -1,0 +1,38 @@
+def is_prime(m):
+	count = 0
+	m = abs(m)
+	if(m == 1):
+		return "False"
+	if (m == 2):
+		return "True"
+	for i in range(2, m):
+		if( m % i == 0):
+			return "False"
+	return "True"
+
+def goldbach(n):
+	prime_first_number = False
+	prime_second_number = False
+	list_one = []
+	list_two = []
+	first_number = 0
+	second_number = 0
+	number = int(n)
+	new_n = number//2 + 1
+	for i in range(1, new_n):
+		prime_first_number = is_prime(i)
+		if (prime_first_number == True ):
+			prime_second_number = is_prime(number-i)
+			if (prime_second_number == True):
+				first_number = str(i)
+				second_number = str(number-i)
+				print (first_number + "   " + second_number)
+
+def main():
+	print ( goldbach(4) )
+	print ( goldbach(6) )
+	print ( goldbach(8) )
+	print ( goldbach(10) )
+	print ( goldbach(100) )
+if __name__ == '__main__':
+		main()
