@@ -1,0 +1,20 @@
+import solution
+import unittest
+
+class FibiTest(unittest.TestCase):
+	def test_fib_with_1(self):
+		self.assertEqual(1, solution.nth_fibonacci(1))
+
+	def test_fib_with_2(self):
+		self.assertEqual(1, solution.nth_fibonacci(2))
+
+	def test_fib_with_10(self):
+		self.assertEqual(55, solution.nth_fibonacci(10))
+
+	def test_fib_with_0(self):
+		self.assertEqual("ERROR", solution.nth_fibonacci(0))
+
+	def test_fib_with_negative_2(self):
+		self.assertEqual("ERROR", solution.nth_fibonacci(-2))
+if __name__ == '__main__':
+    unittest.main()
