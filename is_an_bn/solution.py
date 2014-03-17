@@ -1,0 +1,34 @@
+def is_an_bn(word):
+	count = 0
+	word.lower()
+	if(word == ""):
+		return "True"
+	else:
+		for c in range(0,len(word)):
+			if (word[c] == "a"):
+				count += 1
+			else:
+				break
+		b_count = 0
+		if (count == 0):
+			return "False"
+		else:
+			for i in range(count, len(word)):
+				if(word[i] == "b"):
+					b_count += 1
+				else:
+					return "False"
+			if(b_count == count):
+				return "True"
+			else:
+				return "False"
+def main():
+		print( is_an_bn("") )
+		print( is_an_bn("rado") )
+		print ( is_an_bn("aaabb") )
+		print ( is_an_bn("aaabbb") )
+		print ( is_an_bn("aabbaabb") )
+		print ( is_an_bn("bbbaaa") )
+		print ( is_an_bn("aaaaabbbbb"))
+if __name__ == '__main__':
+		main()
