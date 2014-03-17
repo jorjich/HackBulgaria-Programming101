@@ -1,0 +1,19 @@
+import solution
+import unittest
+
+class SevensInARowTest(unittest.TestCase):
+
+	def test_sevens_in_a_row_1st(self):
+		self.assertEqual("True", solution.sevens_in_a_row([10,8,7,6,7,7,7,20,-7], 3))
+
+	def test_sevens_in_a_row_2nd(self):
+		self.assertEqual("False", solution.sevens_in_a_row([1,7,1,7,7], 4))
+
+	def test_sevens_in_a_row_3rd(self):
+		self.assertEqual("True", solution.sevens_in_a_row([7,7,7,1,1,1,7,7,7,7], 3))
+
+	def test_sevens_in_a_row_4th(self):
+		self.assertEqual("True", solution.sevens_in_a_row([7,2,1,6,2], 1))
+
+if __name__ == '__main__':
+    unittest.main()
