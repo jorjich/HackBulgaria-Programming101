@@ -7,7 +7,7 @@ def main():
         file_directory = sys.argv[1]
         directory_content = os.listdir(file_directory) #sydyrjanieto na papkata
         for i in directory_content:
-            if ("." not in i): #proverqvame, dali i e papka ili fail
+            if "." not in i and "pizza" not in i and "java" not in i and "generate_numbers" not in i: #proverqvame, dali i e papka ili fail
                 os.chdir(file_directory + "/" + i)
                 print("Testing " + i + ":")
                 call("python3.3 tests.py", shell = True)
@@ -16,9 +16,9 @@ def main():
                 print()
                 print()
     elif(len(sys.argv)>2):
-        return "Too many arguments given!"
+        print ("Too many arguments given!")
     else:
-        return "No arguments given!"
+        print ("No arguments given!")
 
 if __name__ == '__main__':
         main()
